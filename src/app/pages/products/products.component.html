@@ -1,0 +1,15 @@
+<main>
+    <app-back-button></app-back-button>
+
+    <ul>
+        <li *ngFor="let item of products">
+            <article>
+                <h3>{{item.title}}</h3>
+                <p>{{item.price}}</p>
+                <a routerLink="/produits/{{item.id}}">Découvrrir ce produit</a>
+            </article>
+        </li>
+    </ul>
+</main>
+
+

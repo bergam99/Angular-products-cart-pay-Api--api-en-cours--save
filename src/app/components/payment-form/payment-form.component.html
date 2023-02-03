@@ -1,0 +1,25 @@
+<form [formGroup]="paymentForm">
+
+    <div>
+        <label for="card_username">Nom prénom</label>
+        <input type="text" id="card_username" formControlName="card_username" [class.hasError]="validationError.includes('card_username')">
+    </div>
+
+    <div>
+        <label for="card_number">Numéro de carte</label>
+        <input type="text" id="card_number" formControlName="card_number" [class.hasError]="validationError.includes('card_number')">
+    </div>
+
+    <div>
+        <label for="card_expiration">Date d'expiration</label>
+        <input type="text" id="card_expiration" formControlName="card_expiration" [class.hasError]="validationError.includes('card_expiration')">
+    </div>
+
+    <div>
+        <label for="card_cvv">CVV</label>
+        <input type="text" id="card_cvv" formControlName="card_cvv" [class.hasError]="validationError.includes('card_cvv')">
+    </div>
+
+    <button type="submit" (click)="pay()">payer</button>
+
+</form>

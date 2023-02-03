@@ -1,0 +1,13 @@
+<ul>
+    <li *ngFor = "let basketProduct of basket; let index = index">
+        <article>
+            <h3>{{basketProduct.product.title}} - {{basketProduct.product.price}} €</h3>
+            <button (click)="removeProduct(index)">Supprimer</button>
+        </article>
+    </li>
+</ul>
+
+<p>Prix total : {{ this.basketService.totalPrice }}</p>
+
+<a routerLink="/paiement">Procéder au paiement</a>
+
